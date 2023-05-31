@@ -8,13 +8,11 @@
     <title>Resume - Rizal Sulthoni</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <style>
         header {
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .fs-c-1 {
@@ -23,6 +21,10 @@
 
         .fs-c-2 {
             font-size: 3rem;
+        }
+
+        .fs-small {
+            font-size: .7rem;
         }
 
         .arrow {
@@ -62,8 +64,11 @@
     <main class="container-xxl">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-10">
-                <header class="d-flex gap-5 align-items-center flex-column flex-lg-row position-relative">
-                    <img src="img/profil.png" width="250" height="250" alt="">
+                <header class="d-flex gap-5 pt-5 pt-md-0 align-items-center flex-column flex-lg-row position-relative">
+                    <img src="img/profil.png" class="d-none d-md-block" width="250" height="250" alt="Rizal Sulthoni"
+                        loading="lazy">
+                    <img src="img/profil.png" class="d-block d-md-none mt-5" width="150" height="150"
+                        alt="Rizal Sulthoni" loading="lazy">
                     <div class="d-flex gap-2 flex-column">
                         <h1 class="fw-bold text-capitalize m-0 fs-c-1 text-center text-lg-start">Rizal Sulthoni</h1>
                         <h6 class="fw-bold text-uppercase m-0 text-primary text-center text-lg-start">web developer</h6>
@@ -73,23 +78,32 @@
                         <span class="border-bottom w-25 my-4 d-block m-auto ms-lg-0"></span>
                         <div
                             class="d-flex gap-2 align-items-center flex-wrap justify-content-center justify-content-lg-start ">
-                            <button type="button"
-                                class="btn btn-sm btn-outline-secondary rounded-pill text-uppercase px-4 py-2 fw-semibold">linkedin</button>
-                            <button type="button"
-                                class="btn btn-sm btn-outline-secondary rounded-pill text-uppercase px-4 py-2 fw-semibold">instagram</button>
-                            <button type="button"
-                                class="btn btn-sm btn-outline-secondary rounded-pill text-uppercase px-4 py-2 fw-semibold">github</button>
-                            <button type="button"
-                                class="btn btn-sm btn-outline-secondary rounded-pill text-uppercase px-4 py-2 fw-semibold">resume</button>
+                            <a href="linkedin.com/in/rizal-sulthoni-1a3953244" target="_blank"
+                                class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-2 d-flex gap-2 align-items-center font-monospace"><i
+                                    class="ri-linkedin-fill ri-lg"></i> linkedin</a>
+                            <a href="https://www.instagram.com/zalsulthoni/" target="_blank"
+                                class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-2 d-flex gap-2 align-items-center font-monospace"><i
+                                    class="ri-instagram-line ri-lg"></i> instagram</a>
+                            <a href="https://github.com/rizalsulthoni" target="_blank"
+                                class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-2 d-flex gap-2 align-items-center font-monospace"><i
+                                    class="ri-github-fill ri-lg"></i> github</a>
+                            <a href="resume/english-resume.pdf" download
+                                class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-2 d-flex gap-2 align-items-center font-monospace"><i
+                                    class="ri-download-cloud-line ri-lg"></i> resume</a>
                         </div>
                     </div>
 
-                    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3">
+                    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3" id="scrollDown">
                         <div class="arrow bounce">
-                            <a class="fa fa-arrow-down fa-2x text-decoration-none text-muted" href="#"></a>
+                            <i class="ri-arrow-down-line ri-2x"></i>
                         </div>
                     </div>
                 </header>
+
+                <div role="button" id="scrollUp" class="position-fixed bottom-0 end-0 me-3 mb-2 mb-md-3"
+                    style="display: none; z-index: 10;">
+                    <i class="ri-arrow-up-line ri-2x"></i>
+                </div>
 
                 <span class="d-block border-bottom my-5 m-auto"></span>
 
@@ -97,11 +111,14 @@
                 <section class="py-5">
                     <div class="fs-c-2 fw-bold text-capitalize mb-2">About me</div>
                     <h6 class="fw-bold text-uppercase mb-4 text-primary">my story</h6>
-                    <p class="m-0 fs-5 font-monospace">Driven by a desire for continuous learning, I actively seek
-                        opportunities to expand my knowledge and skills.<br>I stay up-to-date with the latest industry
-                        trends and best practices through self-study, online courses, and participation in programming
-                        communities.<br>I am always eager to explore new programming languages, frameworks, and tools
-                        that can enhance my abilities and allow me to deliver innovative solutions.<br>With a passion
+                    <p class="fs-5 font-monospace">Driven by a desire for continuous learning, I actively seek
+                        opportunities to expand my knowledge and skills.</p>
+                    <p class="fs-5 font-monospace">I stay up-to-date with the latest industry trends and best practices
+                        through self-study, online courses, and participation in programming communities.</p>
+                    <p class="fs-5 font-monospace">I am always eager to explore new programming languages, frameworks,
+                        and tools
+                        that can enhance my abilities and allow me to deliver innovative solutions.</p>
+                    <p class="fs-5 font-monospace">With a passion
                         for excellence, a collaborative mindset, and a dedication to continuous growth, I am committed
                         to making a positive impact through my programming expertise.</p>
                 </section>
@@ -113,43 +130,108 @@
                     <div class="fs-c-2 fw-bold text-capitalize mb-2">project</div>
                     <h6 class="fw-bold text-uppercase mb-4 text-primary">my story</h6>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6 mb-4">
                             <div class="card">
-                                <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+                                <a href="https://laramaindonesia.com" target="_blank">
+                                    <img src="project/lamara.png" class="card-img-top" alt="">
+                                </a>
                                 <div class="card-body">
-                                    <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                    <p class="card-text font-monospace m-0">Lorem ipsum dolor sit, amet consectetur
-                                        adipisicing elit. Porro, atque?</p>
+                                    <h5 class="card-title">Lamaraindonesia</h5>
+                                    <p class="card-text font-monospace m-0">I made this website from design concept to
+                                        coding, the languages ​​used in making this website are html, css and
+                                        javascript</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">main dev</em>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6 mb-4">
                             <div class="card">
-                                <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+                                <a href="https://solusiedukasi.co.id" target="_blank">
+                                    <img src="project/solusiedukasi.png" class="card-img-top" alt="">
+                                </a>
                                 <div class="card-body">
-                                    <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                    <p class="card-text font-monospace m-0">Lorem ipsum dolor sit, amet consectetur
-                                        adipisicing elit. Porro, atque?</p>
+                                    <h5 class="card-title">Solusiedukasi</h5>
+                                    <p class="card-text font-monospace m-0">Changes to the display and make improvements
+                                        from the backend side, the language used is html, css, js and php</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">frontend dev</em>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6 mb-4">
                             <div class="card">
-                                <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+                                <a href="https://sipkrikes.com" target="_blank">
+                                    <img src="project/sipkrikes.png" class="card-img-top" alt="">
+                                </a>
                                 <div class="card-body">
-                                    <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                    <p class="card-text font-monospace m-0">Lorem ipsum dolor sit, amet consectetur
-                                        adipisicing elit. Porro, atque?</p>
+                                    <h5 class="card-title">Sipkrikes</h5>
+                                    <p class="card-text font-monospace m-0">I use illustrator, html and css to create a
+                                        logo and display with a new and responsive design concept</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">frontend dev</em>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6 mb-4">
                             <div class="card">
-                                <img src="https://placehold.co/600x400/png" class="card-img-top" alt="">
+                                <a href="https://solusindotour.com" target="_blank">
+                                    <img src="project/solusindotour.png" class="card-img-top" alt="">
+                                </a>
                                 <div class="card-body">
-                                    <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                    <p class="card-text font-monospace m-0">Lorem ipsum dolor sit, amet consectetur
-                                        adipisicing elit. Porro, atque?</p>
+                                    <h5 class="card-title">Solusindotour</h5>
+                                    <p class="card-text font-monospace m-0">I created this website using cms from
+                                        sitejet, prepared the design, logo and layout of this website</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">frontend dev</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <a href="https://hungalo.com" target="_blank">
+                                    <img src="project/hungalo.png" class="card-img-top" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Hungalo</h5>
+                                    <p class="card-text font-monospace m-0">Create a design concept as well as a system
+                                        concept, the language used html, css, js, php, socket and nodejs</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">main dev</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <a href="https://byzahiraa.my.id" target="_blank">
+                                    <img src="project/byzahiraa.png" class="card-img-top" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">byZahiraa</h5>
+                                    <p class="card-text font-monospace m-0">Make a catalog for selling products online,
+                                        I use html, css and also javascript to build this web site</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">main dev</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <a href="https://ikmpolrestengahaceh.com" target="_blank">
+                                    <img src="project/ikmpolrestengahaceh.png" class="card-img-top" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Ikmpolresaceh</h5>
+                                    <p class="card-text font-monospace m-0">Make features for service satisfaction from
+                                        the design and system, this website is built with one of the php frameworks</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">main dev</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <a href="https://pustaka.co" target="_blank">
+                                    <img src="project/pustaka.png" class="card-img-top" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Pustaka</h5>
+                                    <p class="card-text font-monospace m-0">I built this website using one of the php
+                                        frameworks, I also made a logo and design concept on the appearance</p>
+                                    <em class="blockquote-footer fs-small m-0 mt-3">main dev</em>
                                 </div>
                             </div>
                         </div>
@@ -161,14 +243,36 @@
                 <!-- work experience  -->
                 <section class="py-5">
                     <div class="fs-c-2 fw-bold text-capitalize mb-2">work experience</div>
-                    <h6 class="fw-bold text-uppercase mb-4 text-primary">my story</h6>
-                    <p class="m-0 fs-5 font-monospace">Driven by a desire for continuous learning, I actively seek
-                        opportunities to expand my knowledge and skills.<br>I stay up-to-date with the latest industry
-                        trends and best practices through self-study, online courses, and participation in programming
-                        communities.<br>I am always eager to explore new programming languages, frameworks, and tools
-                        that can enhance my abilities and allow me to deliver innovative solutions.<br>With a passion
-                        for excellence, a collaborative mindset, and a dedication to continuous growth, I am committed
-                        to making a positive impact through my programming expertise.</p>
+                    <h6 class="fw-bold text-uppercase mb-4 text-primary">worked at</h6>
+                    <div class="py-4">
+                        <p class="fs-5 m-0 fw-bold"><sup class="text-primary">2020</sup> Web Developer</p>
+                        <p class="m-0 text-muted font-monospace">Solusi Jasa Niaga, Jakarta</p>
+                        <ul class="font-monospace text-muted mt-3">
+                            <li>Assist in maintenance and repair of existing web applications.</li>
+                            <li>Keep up with the latest developments in web technologies and share knowledge with the
+                                team.</li>
+                            <li>Optimize website performance by reducing page load times and fixing bug issues.</li>
+                        </ul>
+                    </div>
+                    <div class="py-4">
+                        <p class="fs-5 m-0 fw-bold"><sup class="text-primary">2018</sup> Web Developer & Desainer</p>
+                        <p class="m-0 text-muted font-monospace">Pustaka JC Multimedia, Surabaya</p>
+                        <ul class="font-monospace text-muted mt-3">
+                            <li>Assist in maintenance and repair of existing web applications.</li>
+                            <li>Create poster designs for advertisements.</li>
+                            <li>Develop applications by following current technological developments.</li>
+                        </ul>
+                    </div>
+                    <div class="py-4">
+                        <p class="fs-5 m-0 fw-bold"><sup class="text-primary">2013</sup> Web Developer</p>
+                        <p class="m-0 text-muted font-monospace">Bloomhead Indonesia, Jakarta</p>
+                        <ul class="font-monospace text-muted mt-3">
+                            <li>Develop responsive websites using HTML, CSS and JavaScript.</li>
+                            <li>Build PHP-based web applications with MySQL integration.</li>
+                            <li>Optimize website performance by reducing page load times and fixing bug issues.</li>
+                            <li>Create a design concept for the application to be developed</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <span class="d-block border-bottom my-5 m-auto"></span>
@@ -206,6 +310,34 @@
                         </div>
                     </div>
                 </section>
+
+                <span class="d-block border-bottom my-5 m-auto"></span>
+
+                <!-- contant me  -->
+                <section class="py-5">
+                    <div class="fs-c-2 fw-bold text-capitalize mb-2">contact me</div>
+                    <h6 class="fw-bold text-uppercase mb-4 text-primary">can you get</h6>
+
+                    <div class="d-flex gap-4 align-items-center py-4">
+                        <div class="px-2 text-muted fs-3 fw-bold d-flex align-items-center jutify-content-center">
+                            <i class="ri-home-4-line"></i>
+                        </div>
+                        <p class="m-0 text-muted font-monospace">JL Giok Raya EB-05, Kota Baru Driyorejo, Gersik, Jawa
+                            Timur</p>
+                    </div>
+                    <div class="d-flex gap-4 align-items-center py-4">
+                        <div class="px-2 text-muted fs-3 fw-bold d-flex align-items-center jutify-content-center">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <p class="m-0 text-muted font-monospace">zalsulthoni@gmail.com</p>
+                    </div>
+                    <div class="d-flex gap-4 align-items-center py-4">
+                        <div class="px-2 text-muted fs-3 fw-bold d-flex align-items-center jutify-content-center">
+                            <i class="ri-smartphone-line"></i>
+                        </div>
+                        <p class="m-0 text-muted font-monospace">+62 85722560172</p>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -213,6 +345,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script>
+        let prevScrollPos = window.pageYOffset
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset
+            if (prevScrollPos > currentScrollPos) {
+                document.getElementById('scrollDown').style.display = 'block';
+                document.getElementById('scrollUp').style.display = 'none';
+            } else {
+                document.getElementById('scrollDown').style.display = 'none';
+                document.getElementById('scrollUp').style.display = 'block';
+            }
+            prevScrollPos = currentScrollPos
+        }
+
+        const scrollUpButton = document.getElementById('scrollUp')
+        scrollUpButton.addEventListener('click', function () {
+            document.documentElement.scrollTop = 0;
+        })
+    </script>
 </body>
 
 </html>
